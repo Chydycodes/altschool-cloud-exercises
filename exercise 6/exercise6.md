@@ -82,6 +82,8 @@ Perform the following to determine if a password is set for the root user:
  
  #### My Output :
  
+ ![](https://github.com/Chydycodes/altschool-cloud-exercises/blob/main/exercise%206/IMG_2.PNG)
+ 
 No results should be returned.
 
 ## 2. SERVICES
@@ -128,6 +130,7 @@ If ntp is used:
 
 #### My Output:
 
+![](https://github.com/Chydycodes/altschool-cloud-exercises/blob/main/exercise%206/IMG_3.PNG)
 
 #### 2.1.5 Ensure DHCP Server is not installed (Automated)
 
@@ -147,6 +150,8 @@ Unless a system is specifically set up to act as a DHCP server, it is recommende
 Run the following commands to verify isc-dhcp-server is not installed: `dpkg -s isc-dhcp-server | grep -E '(Status:|not installed)' `
 
 #### My Output :
+
+![](https://github.com/Chydycodes/altschool-cloud-exercises/blob/main/exercise%206/IMG_4.PNG)
 
 ## 3. NETWORK CONFIGURATION
 
@@ -179,6 +184,8 @@ Run the following command to verify that Uncomplicated Firewall (UFW) is install
 
 My Output: 
 
+![](https://github.com/Chydycodes/altschool-cloud-exercises/blob/main/exercise%206/IMG_5.PNG)
+
 ## 4. LOGGING AND AUDITING
 
 System auditing, through auditd, allows system administrators to monitor their systems such that they can detect unauthorized access or modification of data. By default, auditd will audit AppArmor AVC denials, system logins, account modifications, and authentication events. Events will be logged to /var/log/audit/audit.log. The recording of these events will use a modest amount of disk space on a system. If significantly more events are captured, additional on system or off system storage may need to be allocated.
@@ -206,6 +213,8 @@ Review /etc/systemd/journald.conf and verify that logs are forwarded to syslog w
 `grep -e ForwardToSyslog /etc/systemd/journald.conf`
 
 My Output:
+
+![](https://github.com/Chydycodes/altschool-cloud-exercises/blob/main/exercise%206/IMG_6.PNG)
 
 ## 5. ACCESS, AUTHENTICATION AND AUTHORIZATION
 
@@ -243,6 +252,8 @@ Run the following command to verify that cron is running:
 
 My Output:
 
+![](https://github.com/Chydycodes/altschool-cloud-exercises/blob/main/exercise%206/IMG_7.PNG)
+
 #### 5.2 Configure sudo
 
 sudo allows a permitted user to execute a command as the superuser or another user, as specified by the security policy. The invoking user's real (not effective) user ID is used to determine the user name with which to query the security policy
@@ -275,6 +286,8 @@ Run the following command and inspect the output to confirm that sudo is install
 
 My Output: 
 
+![](https://github.com/Chydycodes/altschool-cloud-exercises/blob/main/exercise%206/IMG_8.PNG)
+
 ## 6. SYSTEM MAINTENANCE
 
 #### 6.1 System File Permissions
@@ -305,6 +318,7 @@ Run the following command and verify Uid and Gid are both 0/root and Access is 6
  
  My Output:
  
+ ![](https://github.com/Chydycodes/altschool-cloud-exercises/blob/main/exercise%206/IMG_9.PNG)
  
 ### 6.2 User and Group Settings
 
@@ -339,3 +353,5 @@ Run the following command and verify that no output is returned:
 ` awk -F: '($2 != "x" ) { print $1 " is not set to shadowed passwords "}' /etc/passwd `
 
 My Output
+
+![](https://github.com/Chydycodes/altschool-cloud-exercises/blob/main/exercise%206/IMG_10.PNG)
