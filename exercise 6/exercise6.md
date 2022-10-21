@@ -54,6 +54,8 @@ package `autofs` is not installed
 
 #### My Output:
 
+![](https://github.com/Chydycodes/altschool-cloud-exercises/blob/main/exercise%206/IMG_1.PNG)
+
 ### 1.4 Secure Boot Settings
 The recommendations in this section focus on securing the bootloader and settings involved in the boot process directly.
 
