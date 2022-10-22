@@ -12,7 +12,7 @@ Submit all your answer as a markdown file in the folder for this exercise.
 
 ## Solution
 
-### 1. Network IP 
+### 1. NETWORK IP 
 
 To caculate the network Ip, all hosts bits are 0's. 
 
@@ -38,6 +38,8 @@ To  calculate the number of hosts => 2^h - 2
 
 `Therfore, number of hosts available on the network is 6`
 
+
+
 ### 3. RANGE 
 
 Range lies between the network IP and the brroadcast IP
@@ -53,6 +55,8 @@ Range lies between the network IP and the brroadcast IP
 193.16.20.37
 
 193.16.20.38`
+
+
 
 
 ### 4. BROADCAST IP 
