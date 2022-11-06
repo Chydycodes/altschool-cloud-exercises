@@ -1,6 +1,4 @@
-# PLAYBOOK FILE
-
-                                                                             
+# PLAYBOOK FILE                                                                 
 ---
 - name: deploy apache2 on host server[remote]
   hosts: all
