@@ -1,0 +1,29 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: "sockshop-ingress"
+  annotations:
+  # Core Ingress Settings  
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/scheme: internet-facing
+# SSL Setting - 1
+    ## SSL Settings
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}, {"HTTP":80}]'
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:813037107263:certificate/fe8264dc-9ad2-4106-bf8b-fb2edc7b0503
+    external-dns.alpha.kubernetes.io/hostname: sock-shop.cynthiaezenwa.me 
+  labels:
+    app: sockshop-ingress
+# SSL Setting - 2
+spec:
+  rules:
+  - http:
+      paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: front-end
+              port:
+                number: 80
+
+
